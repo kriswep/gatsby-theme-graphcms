@@ -1,0 +1,19 @@
+{
+  "name": "gatsby-theme-graphcms-sample",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Sample for using gatsby-theme-graphcms",
+  "main": "index.js",
+  "author": "Christoph Benjamin Weber",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.1.17",
+    "gatsby-theme-graphcms": "*",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}

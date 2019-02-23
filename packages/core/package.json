@@ -10,5 +10,16 @@
   "license": "MIT",
   "dependencies": {
     "gatsby-source-graphql": "^2.0.10"
+  },
+  "devDependencies": {
+    "gatsby": "^2.1.17",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "gatsby-source-graphql": "^2.0.10"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.1.17",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   }
 }
