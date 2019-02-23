@@ -1,0 +1,14 @@
+{
+  "name": "gatsby-theme-graphcms",
+  "version": "0.0.1",
+  "description": "Gatsby theme leveraging your GraphCMS data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christoph Benjamin Weber",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby-source-graphql": "^2.0.10"
+  }
+}
