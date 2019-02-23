@@ -1,7 +1,8 @@
 {
   "name": "gatsby-theme-graphcms-root",
   "private": true,
-  "devDependencies": {
-    "lerna": "^3.13.0"
-  }
+  "workspaces": [
+    "samples/*",
+    "packages/*"
+  ]
 }

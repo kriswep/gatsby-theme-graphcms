@@ -11,8 +11,8 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "gatsby": "^2.1.17",
     "gatsby-theme-graphcms": "*",
+    "gatsby": "^2.1.17",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   }
