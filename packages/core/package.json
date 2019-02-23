@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-graphcms",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Gatsby theme leveraging your GraphCMS data",
   "main": "index.js",
   "author": "Christoph Benjamin Weber",
