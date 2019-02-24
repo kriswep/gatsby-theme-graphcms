@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-graphcms-blog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A theme for a blog powered by Gatsby and Markdown",
   "main": "index.js",
   "author": "Christoph Benjamin Weber",
@@ -21,7 +21,7 @@
     "gatsby-remark-responsive-iframe": "^2.0.9",
     "gatsby-remark-smartypants": "^2.0.8",
     "gatsby-source-filesystem": "^2.0.22",
-    "gatsby-theme-graphcms": "^0.1.0",
+    "gatsby-theme-graphcms": "^0.1.1",
     "gatsby-transformer-remark": "^2.2.6",
     "gatsby-transformer-sharp": "^2.1.14",
     "prismjs": "^1.15.0",
