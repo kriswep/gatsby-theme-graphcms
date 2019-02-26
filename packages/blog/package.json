@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-graphcms-blog",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A theme for a blog powered by Gatsby and Markdown",
   "main": "index.js",
   "author": "Christoph Benjamin Weber",
