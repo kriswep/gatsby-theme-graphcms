@@ -17,18 +17,20 @@ If you get stuck along the way, have a look at a [demo setup](https://github.com
 
 1.  **Create a new Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter. This adds the minimal needed dependencies for a Gatsby site.
+    Use the Gatsby CLI to create a new site, specifying the basic starter. This adds the minimal needed dependencies for a Gatsby site.
 
     ```sh
     # create a new Gatsby site using the blog starter
-    npx gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-default
+    npx gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-hello-world
     ```
+
+    You could delete the src folder in the newly generated folder for basic setups.
 
 1. **Setup your GraphCMS API**
     Head over to [GraphCMS](https://graphcms.com/), login or create an account. The free plan should be enough to begin, although the paid plans comes with some nice advanced featurey, like different access roles. This theme expect a certain data model to be existent, which you have to create via their UI. Later on, you (or another content editor of your choice) can write your content right in GraphCMS.
-    
+
     ![The needed GraphCMS data model](https://raw.githubusercontent.com/kriswep/gatsby-theme-graphcms/master/packages/blog/graphcms-model.png)
-    
+
     Finally, don't forget to allow public access to the `QUERY` Scope under settings. While you're there, grap your API endpoint, which we'll need in a moment.
 
 1. **Add this theme as dependency.**
@@ -42,7 +44,7 @@ If you get stuck along the way, have a look at a [demo setup](https://github.com
 
 1. **Configure Gatsby.**
 
-    Create a gatsby-config.js file with the following content, adding the endpoint you've found in the GraphCMS settings.
+    Create a `gatsby-config.js` file with the following content, adding the endpoint you've found in the GraphCMS settings.
 
     ```javascript
     module.exports = {
@@ -62,10 +64,13 @@ If you get stuck along the way, have a look at a [demo setup](https://github.com
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    gatsby develop
+    # develop mode
+    npm run develop
+    # production build, outputs to static files to ./public, which can be hosted nearly anywhere.
+    npm run build
     ```
 
-1.  **Enjoy and start writingg!**
+1.  **Enjoy and start writing!**
 
     Your site is now running at `http://localhost:8000`!
 
