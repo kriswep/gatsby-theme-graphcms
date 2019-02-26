@@ -26,7 +26,9 @@ If you get stuck along the way, have a look at a [demo setup](https://github.com
 
 1. **Setup your GraphCMS API**
     Head over to [GraphCMS](https://graphcms.com/), login or create an account. The free plan should be enough to begin, although the paid plans comes with some nice advanced featurey, like different access roles. This theme expect a certain data model to be existent, which you have to create via their UI. Later on, you (or another content editor of your choice) can write your content right in GraphCMS.
-    <img alt="The needed GraphCMS data model" src="./graphcms-model.png"  />
+    
+    ![The needed GraphCMS data model](https://raw.githubusercontent.com/kriswep/gatsby-theme-graphcms/master/packages/blog/graphcms-model.png)
+    
     Finally, don't forget to allow public access to the `QUERY` Scope under settings. While you're there, grap your API endpoint, which we'll need in a moment.
 
 1. **Add this theme as dependency.**
