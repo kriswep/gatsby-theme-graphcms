@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import slugify from "slugify"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -8,17 +9,17 @@ import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.gcms.post
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
+    console.log(post)
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          title={post.title}
+          description={post.description}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1>{post.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
@@ -27,9 +28,9 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          {new Date(post.date).toLocaleDateString()}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: post.content.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -48,15 +49,15 @@ class BlogPostTemplate extends React.Component {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+              <Link to={slugify(previous.title, { lower: true })} rel="prev">
+                ← {previous.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+              <Link to={slugify(next.title, { lower: true })} rel="next">
+                {next.title} →
               </Link>
             )}
           </li>
@@ -69,21 +70,22 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostById($id: ID!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
+    gcms {
+      post(where: {id: $id}) {
+        id
         title
-        date(formatString: "MMMM DD, YYYY")
         description
+        date
+        content {
+          html
+        }
       }
     }
   }
