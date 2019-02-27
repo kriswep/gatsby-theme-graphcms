@@ -20,11 +20,11 @@ If you get stuck along the way, have a look at a [demo setup](https://github.com
     Use the Gatsby CLI to create a new site, specifying the basic starter. This adds the minimal needed dependencies for a Gatsby site.
 
     ```sh
-    # create a new Gatsby site using the blog starter
+    # create a new Gatsby site using a starter
     npx gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-hello-world
     ```
 
-    You could delete the src folder in the newly generated folder for basic setups.
+    You could delete the `./src` folder in the newly generated folder for basic setups.
 
 1. **Setup your GraphCMS API**
     Head over to [GraphCMS](https://graphcms.com/), login or create an account. The free plan should be enough to begin, although the paid plans comes with some nice advanced featurey, like different access roles. This theme expect a certain data model to be existent, which you have to create via their UI. Later on, you (or another content editor of your choice) can write your content right in GraphCMS.
