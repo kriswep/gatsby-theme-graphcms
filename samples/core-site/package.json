@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-graphcms-sample",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "private": true,
   "description": "Sample for using gatsby-theme-graphcms",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "gatsby": "^2.1.17",
-    "gatsby-theme-graphcms": "^0.1.1",
+    "gatsby-theme-graphcms": "^0.1.5",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
